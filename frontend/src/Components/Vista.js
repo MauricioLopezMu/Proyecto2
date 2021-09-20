@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 export default class Vista extends Component {
 
     state = {
-        userAgent: '"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Mobile Safari/537.36',
+        userAgent: '1',
         respuesta: '',
         cargando: false,
         empty: ''
@@ -22,13 +22,8 @@ export default class Vista extends Component {
         this.setState({
             cargando: true
         });
-        const options = {
-            headers: {
-                'User-Agent': this.state.userAgent,
-            }
-        };
-        const res = await axios.get('http://localhost:4000/api/users/', options);
-        swal(res.data.message);
+        const res = await axios.get('http://localhost:4000/api/users/' + this.state.userAgent);
+        swal(res.data);
         this.setState({
             cargando: false
         });
@@ -49,27 +44,27 @@ export default class Vista extends Component {
                             >
                                 <option
                                     defaultValue
-                                    value="Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Mobile Safari/537.36">
+                                    value="1">
                                     Chrome - Android Mobile
                                 </option>
                                 <option
-                                    value="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36">
+                                    value="2">
                                     Chrome - Windows
                                 </option>
                                 <option
-                                    value="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:70.0) Gecko/20100101 Firefox/70.0">
+                                    value="3">
                                     Firefox - Windows
                                 </option>
                                 <option
-                                    value="Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4">
+                                    value="4">
                                     Firefox - iPhone
                                 </option>
                                 <option
-                                    value="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:70.0) Gecko/20100101 Firefox/70.0">
+                                    value="5">
                                     Firefox - Windows
                                 </option>
                                 <option
-                                    value="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 OPR/65.0.3467.48">
+                                    value="6">
                                     Opera - Windows
                                 </option>
                             </select>

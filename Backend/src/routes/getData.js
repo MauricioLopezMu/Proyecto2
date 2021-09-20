@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = Router();
-const { getRes } = require('../controllers/data');
+const { getRes } = require('../controllers/data2');
 
-router.route('/:id')
+router.route('/')
     .get(getRes)
 
 
