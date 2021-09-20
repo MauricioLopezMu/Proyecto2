@@ -31,8 +31,19 @@
 
 3. End Points
 
-### Consultar 
-> **GET** /api/users
+### Enviar clave de user - Agent
+> **GET** /api/users/:id
+
+```
+Request
+
+
+Response
+   "data": ['message':[]]
+```
+
+### Obtener el user - Agent
+> **GET** /api/data
 
 ```
 Request

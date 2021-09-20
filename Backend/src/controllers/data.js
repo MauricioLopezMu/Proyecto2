@@ -31,6 +31,4 @@ function getUser(select) {
     return user
 }
 
-
-
 module.exports = ctrlData

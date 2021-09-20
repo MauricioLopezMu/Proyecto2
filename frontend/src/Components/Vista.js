@@ -27,7 +27,6 @@ export default class Vista extends Component {
         this.setState({
             cargando: false
         });
-
     }
 
     render() {
