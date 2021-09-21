@@ -1,7 +1,7 @@
 # Proyecto 2 User - Agents
  - López Muñoz Mauricio
  
- Áplicación de comunicación con una end point usando diversos user agets.
+ Áplicación de comunicación con una end point usando diversos user agents.
 
 
 ## DESARROLLO
