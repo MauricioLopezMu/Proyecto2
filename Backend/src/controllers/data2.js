@@ -1,6 +1,4 @@
 const ctrlData = {  }
-const axios = require('axios');
-const userAgent = '';
 
 
 ctrlData.getRes = async (req, res) => {
